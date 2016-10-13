@@ -17,8 +17,8 @@ mkdir -p /tmp/node-app/app
 mkdir -p /tmp/node-api/api
 mkdir -p /tmp/node-db/db
 
-cp -r ~/Project/app/. /tmp/node-app/app/
-cp -r ~/Project/api/. /tmp/node-api/api/
+cp -r ~/app/. /tmp/node-app/app/
+cp -r ~/api/. /tmp/node-api/api/
 cp -r ~/Project/servers/database/. /tmp/node-db/db/
 rm -rf /tmp/node-app/app/.git
 rm -rf /tmp/node-app/app/.gitignore
@@ -32,21 +32,6 @@ cp -r /tmp/node-db/db/. ./my-node-db/db/
 pushd my-nodejs
 docker build --tag my-nodejs:latest .
 popd
-# pushd my-node-app
-# docker build --tag my-node-app:latest .
-# popd
-# pushd my-node-api
-# docker build --tag my-node-api:latest .
-# popd
-# pushd my-node-db
-# docker build --tag my-node-db:latest .
-# popd
-# # pushd my-redis
-# # docker build --tag my-redis:latest .
-# # popd
-# pushd my-mongo
-# docker build --tag my-mongo:latest .
-# popd
 
 # echo "Checking for the container my-redis"
 # set +e
